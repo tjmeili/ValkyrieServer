@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<HBox xmlns:fx="http://javafx.com/fxml" fx:id="hBox" spacing="10.0" stylesheets="@../../../resources/dark_theme.css"
+      xmlns="http://javafx.com/javafx">
+    <children>
+        <Label fx:id="labelName" text="Label" HBox.hgrow="ALWAYS">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </Label>
+        <Label fx:id="labelJobNumber" text="Label" textAlignment="RIGHT" HBox.hgrow="ALWAYS">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </Label>
+      <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+         <children>
+            <Circle fx:id="clockedInCircle" centerX="1.0" centerY="1.0" fill="#ff0808" radius="3.0" stroke="TRANSPARENT" strokeType="INSIDE">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Circle>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+    </children>
+</HBox>

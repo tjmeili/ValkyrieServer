@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" prefWidth="500.0" xmlns="http://javafx.com/javafx"
+            fx:controller="valkyrie.server.ui.dialog.edit.employee.EmployeeDetailsController"
+            stylesheets="@../../../../resources/dark_theme.css">
+   <children>
+      <VBox spacing="10.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+            AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label fx:id="lblName">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox>
+               <children>
+                  <Label text="Device Information" />
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="IP Address" />
+                        <TextField fx:id="tfDeviceIp" />
+                        <Label fx:id="lblNotRegistered" text="Device has not been registered." textFill="#fa0505" visible="false" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox alignment="BOTTOM_RIGHT" layoutX="91.0" layoutY="160.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <HBox HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="btnRemoveEmployee" minHeight="30.0" minWidth="75.0" mnemonicParsing="false" text="Remove Employee" />
+               </children>
+            </HBox>
+            <Button fx:id="btnOk" minHeight="30.0" minWidth="75.0" mnemonicParsing="false" text="OK" />
+            <Button fx:id="btnCancel" minHeight="30.0" minWidth="75.0" mnemonicParsing="false" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

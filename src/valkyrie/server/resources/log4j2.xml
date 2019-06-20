@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="fileName">${sys:user.home}/Valkyrie/logs/valkyrie_server.log</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%highlight{%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg %throwable%n}{FATAL=Bright red, ERROR=red, WARN=yellow, INFO=black, DEBUG=green, TRACE=blue}"/>
+        </Console>
+        <File name="File" fileName="${fileName}" immediateFlush="true" append="true">
+            <PatternLayout
+                    pattern="%highlight{%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg %throwable%n}{FATAL=Bright red, ERROR=red, WARN=yellow, INFO=black, DEBUG=green, TRACE=blue}"/>
+        </File>
+        <File name="FileLocal" fileName="logs/valkyrie_local_logs.log" immediateFlush="true" append="true">
+            <PatternLayout
+                    pattern="%highlight{%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg %throwable%n}{FATAL=Bright red, ERROR=red, WARN=yellow, INFO=black, DEBUG=green, TRACE=blue}"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="ALL">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+        </Root>
+        <AsyncLogger name="ServerLogger" level="trace" includeLocation="true">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+        </AsyncLogger>
+    </Loggers>
+</Configuration>
